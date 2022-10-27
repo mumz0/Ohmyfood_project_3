@@ -1,0 +1,15 @@
+.restaurants {
+    background-color: $lightgray;
+
+    .cards-lst {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 4rem;
+        gap: 1rem;
+    }
+}
+
+.card {
+    @extend .card;
+}
+
