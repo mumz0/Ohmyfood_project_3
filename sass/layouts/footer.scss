@@ -1,0 +1,37 @@
+.footer {
+    background-color: rgb(74, 73, 73);
+    color: $white-color;
+
+    ul {
+        padding-bottom: 2rem;
+        padding-left: 1.5rem;
+        margin-bottom: 0;
+    }
+
+    li {
+        padding-bottom: 0.5rem;
+        list-style: none;
+
+        i {
+            padding-right: 5px;
+            opacity: 1;
+            color:$white-color;
+        }
+    }
+
+}
+
+.footer-restaurant-page {
+    @extend .footer;
+    margin-top: -3rem;
+}
+
+h4 {
+    margin-block-start: 0;
+    margin: 0;
+    padding: 1.5rem 0 0 1.5rem;
+    font-family: $Shrikhand;
+    color: $white-color;
+    font-size: 18px;
+    font-weight: 300;
+}

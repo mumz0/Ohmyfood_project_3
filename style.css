@@ -193,4 +193,37 @@ body {
   gap: 1rem;
 }
 
+.footer, .footer-restaurant-page {
+  background-color: rgb(74, 73, 73);
+  color: white;
+}
+.footer ul, .footer-restaurant-page ul {
+  padding-bottom: 2rem;
+  padding-left: 1.5rem;
+  margin-bottom: 0;
+}
+.footer li, .footer-restaurant-page li {
+  padding-bottom: 0.5rem;
+  list-style: none;
+}
+.footer li i, .footer-restaurant-page li i {
+  padding-right: 5px;
+  opacity: 1;
+  color: white;
+}
+
+.footer-restaurant-page {
+  margin-top: -3rem;
+}
+
+h4 {
+  margin-block-start: 0;
+  margin: 0;
+  padding: 1.5rem 0 0 1.5rem;
+  font-family: "Shrikhand", sans-serif;
+  color: white;
+  font-size: 18px;
+  font-weight: 300;
+}
+
 /*# sourceMappingURL=style.css.map */
