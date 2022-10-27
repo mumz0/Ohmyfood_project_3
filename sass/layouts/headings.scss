@@ -1,0 +1,40 @@
+.headings {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    .localisation {
+        display: flex;
+        flex-direction: row;
+        background-color: rgb(225, 225, 225);
+        justify-content: center;
+
+        .fa-solid {
+            margin-top: 1rem;
+            padding-right: 1rem;
+        }
+    }
+
+    .about {
+        background-color: $lightgray;
+
+
+        h1 {
+            padding-inline: 3rem;
+            font-size: 24px;
+        }
+
+        p {
+            padding-inline: 3rem;
+            font-size: 18px;
+            font-weight: 300;
+        }
+
+        .home-btn {
+            @extend .btn;
+            margin: auto;
+            margin-bottom: 2rem;
+
+        }
+    }
+}

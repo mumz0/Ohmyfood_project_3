@@ -27,4 +27,51 @@
   z-index: 1000;
 }
 
+.headings {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.headings .localisation {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(225, 225, 225);
+  justify-content: center;
+}
+.headings .localisation .fa-solid {
+  margin-top: 1rem;
+  padding-right: 1rem;
+}
+.headings .about {
+  background-color: rgb(240, 240, 240);
+}
+.headings .about h1 {
+  padding-inline: 3rem;
+  font-size: 24px;
+}
+.headings .about p {
+  padding-inline: 3rem;
+  font-size: 18px;
+  font-weight: 300;
+}
+.headings .about .home-btn {
+  margin: auto;
+  margin-bottom: 2rem;
+}
+
+.btn, .headings .about .home-btn {
+  border: 0;
+  height: 50px;
+  width: 220px;
+  border-radius: 2rem;
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: white;
+  text-align: center;
+  font-size: 16px;
+}
+.btn:hover, .headings .about .home-btn:hover {
+  cursor: pointer;
+  transform: scale(1.01);
+}
+
 /*# sourceMappingURL=style.css.map */
