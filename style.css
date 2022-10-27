@@ -59,7 +59,7 @@
   margin-bottom: 2rem;
 }
 
-.btn, .headings .about .home-btn {
+.btn, .order-btn, .headings .about .home-btn {
   border: 0;
   height: 50px;
   width: 220px;
@@ -69,7 +69,7 @@
   text-align: center;
   font-size: 16px;
 }
-.btn:hover, .headings .about .home-btn:hover {
+.btn:hover, .order-btn:hover, .headings .about .home-btn:hover {
   cursor: pointer;
   transform: scale(1.01);
 }
@@ -224,6 +224,99 @@ h4 {
   color: white;
   font-size: 18px;
   font-weight: 300;
+}
+
+.restaurant-picture {
+  width: 100%;
+  height: 15rem;
+  object-fit: cover;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(240, 240, 240);
+  border-radius: 35px 35px 0 0;
+  width: 100%;
+  position: relative;
+  top: -3rem;
+}
+.menu__header {
+  display: flex;
+  flex-direction: row;
+}
+
+.dish-container {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 1rem;
+  gap: 1rem;
+}
+
+.restaurant-title {
+  font-family: "Shrikhand", sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+  margin: 0;
+  padding-left: 1rem;
+  padding-top: 2rem;
+}
+
+.fa-heart {
+  line-height: 6rem;
+  position: absolute;
+  right: 30px;
+  font-size: 24px;
+}
+
+.dish-type {
+  margin: 0;
+  padding-top: 2rem;
+  font-size: 16px;
+}
+.dish-type:after {
+  border-bottom: 3px solid #99E2D0;
+  content: "";
+  display: block;
+  margin-left: 0%;
+  width: 9%;
+  padding-top: 5px;
+}
+
+.order-btn {
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+}
+
+.link-restaurant {
+  text-decoration: none;
+}
+
+.dish-card {
+  display: flex;
+  flex-direction: row;
+  border-radius: 15px;
+  background-color: white;
+  padding: 10px 20px 10px 20px;
+  justify-content: space-between;
+  box-shadow: 0px 3px 0.5rem rgba(0, 0, 0, 0.25);
+}
+.dish-card:hover {
+  transform: scale(1.01);
+}
+.dish-card__title {
+  margin: 0;
+  padding: 5px 0 5px 0;
+}
+.dish-card__description {
+  margin: 0;
+  padding-bottom: 5px;
+}
+.dish-card__price {
+  line-height: 5rem;
+  height: 1rem;
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=style.css.map */
