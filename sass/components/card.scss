@@ -9,7 +9,7 @@
 
     &:hover{
         cursor: pointer;
-        box-shadow: $shadow-plus;
+        transform: scale(1.01);
     }
     &__image{
         height:10rem;
@@ -25,7 +25,6 @@
     .fa-heart{
         line-height: 3rem;
         position: absolute;
-        right: 45px;
         font-size: $size;
     }
 }
@@ -35,6 +34,7 @@
   }
 .subtiles{
     color: black;
+    width: 90%;
 
     .card-title{
         margin: 0;
@@ -49,6 +49,10 @@
         padding-top: 0.2rem;
         padding-bottom: 0.5rem;
   }
+}
+
+.icon{
+    width: 10%;
 }
 
 .link-restaurant {
