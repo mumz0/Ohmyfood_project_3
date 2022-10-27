@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"style.css"}
+{"version":3,"sourceRoot":"","sources":["sass/layouts/header.scss","sass/utils/variables.scss"],"names":[],"mappings":"AAAA;EACI;;AAEA;EACI;EACA;EACA;EACA;;;AAIR;EACI;EACA;EACA;EACA;EACA;EACA;;AAEA;EACI;EACA;;;AAIR;EACI,YCvBK;EDwBL;EACA","file":"style.css"}
