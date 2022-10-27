@@ -1,0 +1,56 @@
+.cards-lst{
+    padding-inline: 1.5rem;
+}
+
+.card{
+    background-color: white;
+    border-radius: $radius-corner;
+    box-shadow: $shadow;
+
+    &:hover{
+        cursor: pointer;
+        box-shadow: $shadow-plus;
+    }
+    &__image{
+        height:10rem;
+        width: 100%;
+        object-fit: cover;
+        border-radius: $radius-corner $radius-corner 0 0;
+    }
+    .card-details{
+        display: flex;
+        flex-direction: row;
+        color: black;
+    }
+    .fa-heart{
+        line-height: 3rem;
+        position: absolute;
+        right: 45px;
+        font-size: $size;
+    }
+}
+
+.category-title{
+    padding: 2rem 0 0 1.5rem;
+  }
+.subtiles{
+    color: black;
+
+    .card-title{
+        margin: 0;
+        padding-left: 1rem;
+        padding-top: 0.5rem;
+        font-size: $size - 8;    
+  }
+
+    .byline{
+        margin: 0;
+        padding-left: 1rem;
+        padding-top: 0.2rem;
+        padding-bottom: 0.5rem;
+  }
+}
+
+.link-restaurant {
+    text-decoration: none;
+}
