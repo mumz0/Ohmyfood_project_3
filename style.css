@@ -24,7 +24,7 @@
 .header__shadow {
   box-shadow: 0px 3px 0.5rem rgba(0, 0, 0, 0.25);
   position: relative;
-  z-index: 1000;
+  z-index: 0;
 }
 
 .headings {
@@ -151,6 +151,7 @@ body {
   display: flex;
   flex-direction: row;
   color: black;
+  justify-content: space-between;
 }
 .card .fa-heart {
   line-height: 3rem;
@@ -164,7 +165,6 @@ body {
 
 .subtiles {
   color: black;
-  width: 90%;
 }
 .subtiles .card-title {
   margin: 0;
@@ -180,7 +180,9 @@ body {
 }
 
 .icon {
-  width: 10%;
+  justify-content: center;
+  display: flex;
+  width: 80px;
 }
 
 .link-restaurant {
@@ -264,6 +266,7 @@ h4 {
   margin: 0;
   padding-left: 1rem;
   padding-top: 2rem;
+  width: 90%;
 }
 
 .fa-heart {
@@ -301,12 +304,11 @@ h4 {
   flex-direction: row;
   border-radius: 15px;
   background-color: white;
-  padding: 10px 20px 10px 20px;
   justify-content: space-between;
   box-shadow: 0px 3px 0.5rem rgba(0, 0, 0, 0.25);
 }
 .dish-card:hover {
-  transform: scale(1.01);
+  cursor: pointer;
 }
 .dish-card__title {
   margin: 0;
@@ -320,6 +322,9 @@ h4 {
   line-height: 5rem;
   height: 1rem;
   font-weight: 600;
+}
+.dish-card__about-dish {
+  padding: 10px 20px 10px 20px;
 }
 
 .fa-solid {
@@ -387,53 +392,43 @@ h4 {
   animation-delay: 1300ms;
 }
 
-lds-ripple {
-  display: inline-block;
-  position: relative;
-  width: 80px;
-  height: 80px;
+.loader {
+  position: fixed;
+  animation: animloader 3s;
 }
-
-.lds-ripple div {
-  position: absolute;
-  border: 4px solid #fff;
-  opacity: 1;
-  border-radius: 50%;
-  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+.loader__animation {
+  top: 300px;
+  width: 8px;
+  height: 48px;
+  display: block;
+  margin: auto;
+  left: -20px;
+  position: fixed;
+  border-radius: 4px;
+  box-sizing: border-box;
+  animation: animloader 3s linear alternate;
 }
-
-.lds-ripple div:nth-child(2) {
-  animation-delay: -0.5s;
-}
-
-@keyframes lds-ripple {
+@keyframes animloader {
   0% {
-    top: 36px;
-    left: 36px;
-    width: 0;
-    height: 0;
-    opacity: 0;
+    box-shadow: 20px 0 #9356DC, 40px 0 #99E2D0, 60px 0 #FF79DA;
+    background-color: white;
+    opacity: 0.95;
+    z-index: 1;
+    inset: 0;
   }
-  4.9% {
-    top: 36px;
-    left: 36px;
-    width: 0;
-    height: 0;
-    opacity: 0;
-  }
-  5% {
-    top: 36px;
-    left: 36px;
-    width: 0;
-    height: 0;
-    opacity: 1;
+  50% {
+    box-shadow: 20px 0 #FF79DA, 40px 0 #9356DC, 60px 0 #99E2D0;
+    background-color: white;
+    opacity: 0.95;
+    z-index: 1;
+    inset: 0;
   }
   100% {
-    top: 0px;
-    left: 0px;
-    width: 72px;
-    height: 72px;
-    opacity: 0;
+    box-shadow: 20px 0 #99E2D0, 40px 0 #FF79DA, 60px 0 #9356DC;
+    background-color: white;
+    opacity: 0.95;
+    z-index: 1;
+    inset: 0;
   }
 }
 
