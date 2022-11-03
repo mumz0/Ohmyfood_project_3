@@ -2,6 +2,12 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+.content{
+    max-width: 1920px;
+    display: block;
+    margin: 0 auto;
+}
+
 .category-title {
     padding: 2rem 0 0 1.5rem;
 }

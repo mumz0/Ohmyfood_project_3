@@ -5,9 +5,16 @@
     background-color: $white-color;
     justify-content: space-between;
     box-shadow: $shadow;
+    overflow:hidden;
 
     &:hover{
         cursor: pointer;
+        .confirmation-animation{
+            margin:0;
+        }
+        .icon-animation{
+            animation: rotation .5s;
+            }
     }
 
     &__title{
@@ -19,11 +26,43 @@
         padding-bottom: 5px;
     }
     &__price{
-        line-height: 5rem;
-        height: 1rem;
+        line-height: 6.4rem;
+        height: 75px;
         font-weight: 600;
+        padding-inline: 15px;
     }
-    &__about-dish{
+    .about-dish{
         padding: 10px 20px 10px 20px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 85%;
     }
+}
+
+.confirmation-animation{
+    width: 80px;
+    background-color: #99e2d0;
+    margin: 0rem -4.5rem 0rem 0rem;
+    transition-duration: .5s;
+ }
+
+.fa-circle-check{
+    display: flex;
+    justify-content: center;
+    opacity: 1;
+    color: white;
+    font-size: 30px;
+    line-height: 4.5rem;
+    
+        
+}
+
+ @keyframes rotation{
+    0%{
+    transform: rotate(0)
+}
+    100%{
+    transform: rotate(360deg);
+}
 }
