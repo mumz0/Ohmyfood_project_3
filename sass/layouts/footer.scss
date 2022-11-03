@@ -17,6 +17,7 @@
             opacity: 1;
             color:$white-color;
         }
+        
     }
 
 }
@@ -24,6 +25,12 @@
 .footer-restaurant-page {
     @extend .footer;
     margin-top: -3rem;
+    
+    @include media-min($tablet-min) {
+        top: 55rem;
+        position: relative;
+        margin: 0;
+    }
 }
 
 h4 {

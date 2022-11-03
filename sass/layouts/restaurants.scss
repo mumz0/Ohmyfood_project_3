@@ -1,14 +1,36 @@
 .restaurants {
     background-color: $lightgray;
 
-    .cards-lst {
+    .menus-container {
+        gap: 1rem;
         display: flex;
         flex-direction: column;
-        padding-bottom: 4rem;
-        gap: 1rem;
 
+        @include media-min($tablet-min) {
+            flex-direction: row;
+            justify-content: center;
+            gap: 2rem;
+        }
+        
     }
-}
+        .cards-lst {
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 4rem;
+            gap: 1rem;
+            padding-top: 1rem;
+            padding-bottom: 4rem;
+            
+            @include media-min($tablet-min) {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                padding-top: 2rem;
+            }
+
+        }
+    }
+
 
 .card {
     @extend .card;

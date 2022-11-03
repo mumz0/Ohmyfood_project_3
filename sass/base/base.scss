@@ -1,7 +1,12 @@
 body {
     font-family: 'Roboto', sans-serif;
 }
-
+.main-other-pages{
+    @include media-min($tablet-min) {
+        height: 33rem;
+    }
+    
+}
 .content{
     max-width: 1920px;
     display: block;
@@ -10,4 +15,10 @@ body {
 
 .category-title {
     padding: 2rem 0 0 1.5rem;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: white;
 }
