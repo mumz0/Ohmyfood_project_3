@@ -15,3 +15,11 @@
 }
 }
 }
+
+.icon-heart-other-pages{
+    @extend .icon;
+    @include media-min($tablet-min) {
+        color:white;
+    }
+    
+}

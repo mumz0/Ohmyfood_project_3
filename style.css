@@ -1,17 +1,607 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 2 | @import 'utils/mixin.scss';
- *   |         ^^^^^^^^^^^^^^^^^^
- *   '
- *   sass\style.scss 2:9  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 2 \2502  @import 'utils/mixin.scss';\d\a   \2502          ^^^^^^^^^^^^^^^^^^\a   \2575 \a   sass\\style.scss 2:9  root stylesheet";
+.header {
+  display: flex;
 }
+.header .logo {
+  margin: auto;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  height: 1.8rem;
+}
+
+.link-back {
+  display: flex;
+  text-align: center;
+  padding: 25px;
+  align-items: center;
+  text-decoration: none;
+  position: absolute;
+}
+.link-back .fas {
+  font-size: 22px;
+  color: black;
+}
+
+.header__shadow {
+  box-shadow: 0px 3px 0.5rem rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 0;
+}
+
+.headings {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.headings .localisation {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(225, 225, 225);
+  justify-content: center;
+}
+.headings .localisation .fa-solid {
+  margin-top: 1rem;
+  padding-right: 1rem;
+}
+.headings .about {
+  background-color: rgb(240, 240, 240);
+}
+.headings .about h1 {
+  padding-inline: 3rem;
+  font-size: 24px;
+}
+.headings .about p {
+  padding-inline: 3rem;
+  font-size: 18px;
+  font-weight: 300;
+}
+.headings .about .home-btn {
+  margin: auto;
+  margin-bottom: 2rem;
+}
+
+.btn, .order-btn, .headings .about .home-btn {
+  border: 0;
+  height: 50px;
+  width: 220px;
+  border-radius: 2rem;
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: white;
+  text-align: center;
+  font-size: 16px;
+}
+.btn:hover, .order-btn:hover, .headings .about .home-btn:hover {
+  cursor: pointer;
+  transform: scale(1.01);
+  background: linear-gradient(#ff9de4, #a16ddf);
+}
+
+.tutorial {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .tutorial {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 768px) {
+  .tutorial .category-title {
+    width: 28%;
+  }
+}
+.tutorial .operations {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-inline: 2rem;
+  counter-reset: compteListe;
+}
+@media screen and (min-width: 768px) {
+  .tutorial .operations {
+    justify-content: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    width: 35%;
+  }
+}
+.tutorial .operations .step {
+  counter-increment: compteListe 1;
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(240, 240, 240);
+  box-shadow: 0px 3px 0.5rem rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  height: 4.5rem;
+  justify-content: start;
+  align-items: center;
+}
+.tutorial .operations .step span {
+  font-weight: 600;
+}
+@media screen and (min-width: 768px) {
+  .tutorial .operations .step span {
+    padding-right: 2rem;
+  }
+}
+.tutorial .operations .step::before {
+  content: counter(compteListe) " ";
+  background: #9356DC;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative;
+  left: -1rem;
+}
+.tutorial .operations .step i {
+  color: gray;
+  line-height: 4.3rem;
+  padding-right: 1rem;
+  opacity: 1;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+@media screen and (min-width: 768px) {
+  .main-other-pages {
+    height: 33rem;
+  }
+}
+
+.content {
+  max-width: 1920px;
+  display: block;
+  margin: 0 auto;
+}
+
+.category-title {
+  padding: 2rem 0 0 1.5rem;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.cards-lst {
+  padding-inline: 1.5rem;
+}
+
+.card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 3px 0.5rem rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .card {
+    width: 22rem;
+  }
+}
+.card:hover {
+  cursor: pointer;
+}
+.card__image {
+  height: 10rem;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+.card__badge {
+  top: 13px;
+  right: 13px;
+  position: absolute;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  height: 26px;
+  align-items: center;
+  color: #2d7463;
+  background-color: #99E2D0;
+  font-weight: bold;
+  border-radius: 3px;
+  font-size: 12px;
+}
+.card .card-details {
+  display: flex;
+  flex-direction: row;
+  color: black;
+  justify-content: space-between;
+}
+.card .fa-heart {
+  line-height: 3rem;
+  position: absolute;
+  font-size: 24px;
+}
+
+.subtiles {
+  color: black;
+}
+.subtiles .card-title {
+  margin: 0;
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+  font-size: 16px;
+}
+.subtiles .byline {
+  margin: 0;
+  padding-left: 1rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.5rem;
+}
+
+.icon, .icon-heart-other-pages {
+  justify-content: center;
+  display: flex;
+  width: 80px;
+}
+
+.link-restaurant {
+  text-decoration: none;
+}
+
+.restaurants {
+  background-color: rgb(240, 240, 240);
+}
+.restaurants .menus-container {
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .restaurants .menus-container {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
+}
+.restaurants .cards-lst {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 4rem;
+  gap: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 4rem;
+}
+@media screen and (min-width: 768px) {
+  .restaurants .cards-lst {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 2rem;
+  }
+}
+
+.footer, .footer-restaurant-page {
+  background-color: rgb(74, 73, 73);
+  color: white;
+}
+.footer ul, .footer-restaurant-page ul {
+  padding-bottom: 2rem;
+  padding-left: 1.5rem;
+  margin-bottom: 0;
+}
+.footer li, .footer-restaurant-page li {
+  padding-bottom: 0.5rem;
+  list-style: none;
+}
+.footer li i, .footer-restaurant-page li i {
+  padding-right: 5px;
+  opacity: 1;
+  color: white;
+}
+
+.footer-restaurant-page {
+  margin-top: -3rem;
+}
+@media screen and (min-width: 768px) {
+  .footer-restaurant-page {
+    top: 55rem;
+    position: relative;
+    margin: 0;
+  }
+}
+
+h4 {
+  margin-block-start: 0;
+  margin: 0;
+  padding: 1.5rem 0 0 1.5rem;
+  font-family: "Shrikhand", sans-serif;
+  color: white;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.restaurant-picture {
+  width: 100%;
+  height: 15rem;
+  object-fit: cover;
+}
+@media screen and (min-width: 768px) {
+  .restaurant-picture {
+    height: 88rem;
+  }
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(240, 240, 240);
+  border-radius: 35px 35px 0 0;
+  width: 100%;
+  position: relative;
+  top: -3rem;
+}
+@media screen and (min-width: 768px) {
+  .menu {
+    background-color: transparent;
+    max-width: 51%;
+    top: -82rem;
+    right: -27%;
+  }
+}
+.menu__header {
+  display: flex;
+  flex-direction: row;
+}
+
+.dish-container {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 1rem;
+  gap: 1rem;
+}
+
+.restaurant-title {
+  font-family: "Shrikhand", sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+  margin: 0;
+  padding-left: 1rem;
+  padding-top: 2rem;
+  width: 90%;
+}
+@media screen and (min-width: 768px) {
+  .restaurant-title {
+    color: white;
+  }
+}
+
+.fa-heart {
+  line-height: 6rem;
+  position: absolute;
+  font-size: 24px;
+}
+
+.dish-type {
+  margin: 0;
+  padding-top: 2rem;
+  font-size: 16px;
+}
+@media screen and (min-width: 768px) {
+  .dish-type {
+    color: white;
+  }
+}
+.dish-type:after {
+  border-bottom: 3px solid #99E2D0;
+  content: "";
+  display: block;
+  margin-left: 0%;
+  width: 9%;
+  padding-top: 5px;
+}
+
+.order-btn-container {
+  display: flex;
+}
+
+.order-btn {
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+}
+
+.link-restaurant {
+  text-decoration: none;
+}
+
+.dish-card {
+  display: flex;
+  flex-direction: row;
+  border-radius: 15px;
+  background-color: white;
+  justify-content: space-between;
+  box-shadow: 0px 3px 0.5rem rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  height: 67px;
+}
+.dish-card:hover {
+  cursor: pointer;
+}
+.dish-card:hover .confirmation-animation {
+  margin: 0;
+}
+.dish-card:hover .icon-animation {
+  animation: rotation 0.5s;
+}
+.dish-card__title {
+  margin: 0;
+  padding: 5px 0 5px 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.dish-card__description {
+  margin: 0;
+  padding-bottom: 5px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.dish-card__price {
+  line-height: 5.4rem;
+  height: 75px;
+  font-weight: 600;
+  padding-inline: 15px;
+}
+.dish-card .about-dish {
+  padding-top: 10px;
+  padding-left: 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 85%;
+}
+.dish-card .about-dish h3 {
+  font-size: 16px;
+}
+.dish-card .about-dish p {
+  font-size: 12px;
+}
+
+.confirmation-animation {
+  width: 80px;
+  background-color: #99e2d0;
+  margin: 0rem -5rem 0rem 0rem;
+  transition-duration: 0.5s;
+}
+
+.fa-circle-check {
+  display: flex;
+  justify-content: center;
+  opacity: 1;
+  color: white;
+  font-size: 30px;
+  line-height: 4.5rem;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.icon .fa-solid, .icon-heart-other-pages .fa-solid {
+  color: transparent;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  transition: all 100ms ease-in-out;
+  opacity: 0;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.icon .fa-solid:hover, .icon-heart-other-pages .fa-solid:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+@media screen and (min-width: 768px) {
+  .icon-heart-other-pages {
+    color: white;
+  }
+}
+
+@keyframes appear {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.dish-card {
+  animation: appear 1s;
+  animation-fill-mode: both;
+}
+.dish-card:nth-child(1) {
+  animation-delay: 100ms;
+}
+.dish-card:nth-child(2) {
+  animation-delay: 200ms;
+}
+.dish-card:nth-child(3) {
+  animation-delay: 300ms;
+}
+.dish-card:nth-child(4) {
+  animation-delay: 400ms;
+}
+.dish-card:nth-child(5) {
+  animation-delay: 500ms;
+}
+.dish-card:nth-child(6) {
+  animation-delay: 600ms;
+}
+.dish-card:nth-child(7) {
+  animation-delay: 700ms;
+}
+.dish-card:nth-child(8) {
+  animation-delay: 800ms;
+}
+.dish-card:nth-child(9) {
+  animation-delay: 900ms;
+}
+.dish-card:nth-child(10) {
+  animation-delay: 1000ms;
+}
+.dish-card:nth-child(11) {
+  animation-delay: 1100ms;
+}
+.dish-card:nth-child(12) {
+  animation-delay: 1200ms;
+}
+.dish-card:nth-child(13) {
+  animation-delay: 1300ms;
+}
+
+.loader {
+  position: fixed;
+  animation: animloader 3s;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 50vh;
+  padding-left: 6vw;
+  z-index: -1;
+}
+.loader__animation {
+  width: 8px;
+  height: 48px;
+  display: block;
+  border-radius: 4px;
+  box-sizing: border-box;
+  animation: animloader 3s linear alternate;
+  margin-left: 46vw;
+  margin-top: 50vh;
+}
+@keyframes animloader {
+  0% {
+    box-shadow: 20px 0 #9356DC, 40px 0 #99E2D0, 60px 0 #FF79DA;
+    background-color: white;
+    opacity: 0.95;
+    z-index: 1;
+    inset: 0;
+  }
+  50% {
+    box-shadow: 20px 0 #FF79DA, 40px 0 #9356DC, 60px 0 #99E2D0;
+    background-color: white;
+    opacity: 0.95;
+    z-index: 1;
+    inset: 0;
+  }
+  100% {
+    box-shadow: 20px 0 #99E2D0, 40px 0 #FF79DA, 60px 0 #9356DC;
+    background-color: white;
+    opacity: 0.95;
+    z-index: 1;
+    inset: 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

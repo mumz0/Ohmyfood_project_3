@@ -6,7 +6,8 @@
     justify-content: space-between;
     box-shadow: $shadow;
     overflow:hidden;
-
+    height: 67px;
+    
     &:hover{
         cursor: pointer;
         .confirmation-animation{
@@ -20,31 +21,47 @@
     &__title{
         margin: 0;
         padding: 5px 0 5px 0;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
     }
     &__description{
         margin: 0;
         padding-bottom: 5px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
     }
     &__price{
-        line-height: 6.4rem;
+        line-height: 5.4rem;
         height: 75px;
         font-weight: 600;
         padding-inline: 15px;
     }
     .about-dish{
-        padding: 10px 20px 10px 20px;
+        padding-top: 10px;
+        padding-left: 10px;
         white-space: nowrap;
-        overflow: hidden;
         text-overflow: ellipsis;
+        overflow: hidden;
         width: 85%;
+
+        h3{
+            font-size: 16px;
+        }
+        p{
+            font-size: 12px;
+        }
     }
 }
 
 .confirmation-animation{
     width: 80px;
     background-color: #99e2d0;
-    margin: 0rem -4.5rem 0rem 0rem;
+    margin: 0rem -5rem 0rem 0rem;
     transition-duration: .5s;
+
+   
  }
 
 .fa-circle-check{
