@@ -1,21 +1,26 @@
+
+
 .loader{
     position: fixed;
     animation: animloader 3s;
- 
+    width: 100vw;
+    height: 100vh;
+    padding-top: 50vh;
+    padding-left: 6vw;
+    z-index: -1;
 
     &__animation {
-        top: 300px;
-        width: 8px;
-        height: 48px;
-        display: block;
-        margin: auto;
-        left: -20px;
-        position: fixed;
-        border-radius: 4px;
-        box-sizing: border-box;
-        animation: animloader 3s linear alternate;
+
+      width: 8px;
+      height: 48px;
+      display: block;
+      border-radius: 4px;
+      box-sizing: border-box;
+      animation: animloader 3s linear alternate;
+      margin-left: 46vw;
+      margin-top: 50vh;
     } 
-     
+      
   @keyframes animloader {
     0% {
       box-shadow: 20px 0 #9356DC, 40px 0#99E2D0, 60px 0 #FF79DA;
@@ -44,4 +49,6 @@
     }
   }
 }  
+
+
   

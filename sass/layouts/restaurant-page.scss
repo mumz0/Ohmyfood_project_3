@@ -58,14 +58,16 @@
         padding-top: 5px;
       }
 }
-
-.order-btn{
-    @extend .btn;
-    margin: auto;
-    margin-top: 2rem;
-    margin-bottom: 5rem;
-    
+.order-btn-container{
+    display: flex
 }
+    .order-btn{
+        @extend .btn;
+        margin: auto;
+        margin-top: 2rem;
+        margin-bottom: 5rem;
+        
+    }
 
 .link-restaurant{
     text-decoration: none;
