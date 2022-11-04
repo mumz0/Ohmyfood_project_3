@@ -1,15 +1,19 @@
 @import 'utils/variables.scss';
 @import 'utils/mixins.scss';
+
+@import 'base/base.scss';
+
 @import 'layouts/header.scss';
 @import 'layouts/headings.scss';
-@import 'components/button.scss';
-@import 'layouts/tutorial.scss';
-@import 'base/base.scss';
-@import 'components/card.scss';
 @import 'layouts/restaurants.scss';
 @import 'layouts/footer.scss';
 @import 'layouts/restaurant-page.scss';
+@import 'layouts/tutorial.scss';
+
+@import 'components/button.scss';
 @import 'components/dish-card.scss';
+@import 'components/card.scss';
+
 @import 'animations/heart.scss';
 @import 'animations/cards-apparition-delay.scss';
 @import 'animations/loader.scss';

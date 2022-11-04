@@ -18,7 +18,7 @@
 
 .icon-heart-other-pages{
     @extend .icon;
-    @include media-min($tablet-min) {
+    @include responsive($tablet) {
         color:white;
     }
     
