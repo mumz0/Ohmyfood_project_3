@@ -8,7 +8,7 @@
     box-shadow: $shadow;
     position: relative;
 
-    @include media-min($tablet-min) {
+    @include responsive($tablet) {
         width:22rem;
     }
 
