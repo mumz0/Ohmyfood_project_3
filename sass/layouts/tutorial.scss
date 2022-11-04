@@ -2,12 +2,12 @@
     display: flex;
     flex-direction: column;
 
-    @include media-min($tablet-min) {
+    @include responsive($tablet) {
         flex-direction: row;
       }
      
     .category-title{
-        @include media-min($tablet-min) {
+        @include responsive($tablet) {
             width:28%;
           }
     }  
@@ -19,7 +19,7 @@
         padding-inline: 2rem;
         counter-reset: compteListe;
 
-        @include media-min($tablet-min) {
+        @include responsive($tablet) {
             justify-content: center;
             margin-top: 5rem;
             margin-bottom: 5rem;
@@ -40,7 +40,7 @@
             span {
                 font-weight: 600;
                 
-                @include media-min($tablet-min) {
+                @include responsive($tablet) {
                   padding-right: 2rem;
                 }
                 
