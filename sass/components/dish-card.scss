@@ -16,14 +16,6 @@
         }
     }
     
-    animation: appear 1s;
-    animation-fill-mode: both;
-    @for $i from 1 through 13{
-        &:nth-child(#{$i}) {
-            animation-delay: 100ms *$i;
-        }
-    }
-
     &:hover{
         cursor: pointer;
         .confirmation-animation{
