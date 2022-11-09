@@ -14,7 +14,12 @@
 
     &:hover{
         cursor: pointer;
-        
+        box-shadow: $shadow-plus;
+
+        @include responsive($tablet) {
+            box-shadow: $shadow;
+            transform:scale(1.01)
+        }
     }
     &__image{
         height:10rem;
@@ -68,12 +73,35 @@
   }
 }
 
-.icon{
+.icon {
     justify-content: center;
     display: flex;
     width: 80px;
+    z-index: 2;
+
+    .fa-solid {
+        color: transparent;
+        background-image: linear-gradient(#FF79DA, #9356DC);
+        transition: all 100ms ease-in-out;
+        opacity: 0;
+        background-clip: text;
+        -webkit-background-clip: text;
+
+        &:hover {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+    }
+}
+
+.icon-heart-other-pages{
+    @extend .icon;
+    @include responsive($tablet) {
+        color:white;
+    }    
 }
 
 .link-restaurant {
     text-decoration: none;
+    color: transparent;
 }

@@ -8,6 +8,14 @@
     overflow:hidden;
     height: 67px;
     
+    animation: appear 1s;
+    animation-fill-mode: both;
+    @for $i from 1 through 13{
+        &:nth-child(#{$i}) {
+            animation-delay: 100ms *$i;
+        }
+    }
+
     &:hover{
         cursor: pointer;
         .confirmation-animation{
@@ -82,4 +90,13 @@
     100%{
     transform: rotate(360deg);
 }
+}
+
+@keyframes appear {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
