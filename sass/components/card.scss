@@ -77,13 +77,17 @@
     justify-content: center;
     display: flex;
     width: 80px;
+<<<<<<< HEAD
     z-index: 2;
+=======
+>>>>>>> 51c600183caf0e20594b3f72185707920f910f99
 
     .fa-solid {
         color: transparent;
         background-image: linear-gradient(#FF79DA, #9356DC);
         transition: all 100ms ease-in-out;
         opacity: 0;
+<<<<<<< HEAD
         background-clip: text;
         -webkit-background-clip: text;
 
@@ -91,6 +95,16 @@
             opacity: 1;
             transform: scale(1.1);
         }
+=======
+        background-clip:text;
+        -webkit-background-clip: text;
+        
+    
+        &:hover {
+            opacity: 1;
+            transform:scale(1.1);
+    }
+>>>>>>> 51c600183caf0e20594b3f72185707920f910f99
     }
 }
 
@@ -98,7 +112,12 @@
     @extend .icon;
     @include responsive($tablet) {
         color:white;
+<<<<<<< HEAD
     }    
+=======
+    }
+    
+>>>>>>> 51c600183caf0e20594b3f72185707920f910f99
 }
 
 .link-restaurant {

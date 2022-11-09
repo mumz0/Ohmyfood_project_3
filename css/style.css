@@ -328,13 +328,21 @@ h4 {
   color: white;
   text-align: center;
   font-size: 16px;
+<<<<<<< HEAD
   box-shadow: shadow;
+=======
+  box-shadow: 0px 3px 0.5rem rgba(0, 0, 0, 0.25);
+>>>>>>> 51c600183caf0e20594b3f72185707920f910f99
 }
 .btn:hover, .headings .about .home-btn:hover, .order-btn:hover {
   cursor: pointer;
   transform: scale(1.01);
   background: linear-gradient(#ff9de4, #a16ddf);
+<<<<<<< HEAD
   box-shadow: 0px 3px 1rem rgba(0, 0, 0, 0.5);
+=======
+  box-shadow: 0px 3px 0.5rem rgba(0, 0, 0, 0.5);
+>>>>>>> 51c600183caf0e20594b3f72185707920f910f99
 }
 
 .dish-card {
@@ -565,7 +573,10 @@ h4 {
 
 .link-restaurant {
   text-decoration: none;
+<<<<<<< HEAD
   color: transparent;
+=======
+>>>>>>> 51c600183caf0e20594b3f72185707920f910f99
 }
 
 .loader {

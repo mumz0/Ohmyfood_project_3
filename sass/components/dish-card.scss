@@ -7,6 +7,14 @@
     box-shadow: $shadow;
     overflow:hidden;
     height: 67px;
+
+    animation: appear 1s;
+    animation-fill-mode: both;
+    @for $i from 1 through 13{
+        &:nth-child(#{$i}) {
+            animation-delay: 100ms *$i;
+        }
+    }
     
     animation: appear 1s;
     animation-fill-mode: both;
