@@ -265,7 +265,7 @@ h4 {
     width: 28%;
   }
 }
-.tutorial .operations {
+.tutorial__operations {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -273,14 +273,14 @@ h4 {
   counter-reset: compteListe;
 }
 @media screen and (min-width: 768px) {
-  .tutorial .operations {
+  .tutorial__operations {
     justify-content: center;
     margin-top: 5rem;
     margin-bottom: 5rem;
     width: 35%;
   }
 }
-.tutorial .operations .step {
+.tutorial__operations__step {
   counter-increment: compteListe 1;
   display: flex;
   flex-direction: row;
@@ -291,15 +291,15 @@ h4 {
   justify-content: start;
   align-items: center;
 }
-.tutorial .operations .step span {
+.tutorial__operations__step span {
   font-weight: 600;
 }
 @media screen and (min-width: 768px) {
-  .tutorial .operations .step span {
+  .tutorial__operations__step span {
     padding-right: 2rem;
   }
 }
-.tutorial .operations .step::before {
+.tutorial__operations__step::before {
   content: counter(compteListe) " ";
   background: #9356DC;
   height: 2rem;
@@ -312,7 +312,7 @@ h4 {
   position: relative;
   left: -1rem;
 }
-.tutorial .operations .step i {
+.tutorial__operations__step i {
   color: gray;
   line-height: 4.3rem;
   padding-right: 1rem;
@@ -332,7 +332,6 @@ h4 {
 }
 .btn:hover, .headings .about .home-btn:hover, .order-btn:hover {
   cursor: pointer;
-  transform: scale(1.01);
   background: linear-gradient(#ff9de4, #a16ddf);
   box-shadow: 0px 3px 0.5rem rgba(0, 0, 0, 0.5);
 }
@@ -417,7 +416,7 @@ h4 {
   font-weight: 600;
   padding-inline: 15px;
 }
-.dish-card .about-dish {
+.dish-card__about-dish {
   padding-top: 10px;
   padding-left: 10px;
   white-space: nowrap;
@@ -425,10 +424,10 @@ h4 {
   overflow: hidden;
   width: 85%;
 }
-.dish-card .about-dish h3 {
+.dish-card__about-dish h3 {
   font-size: 16px;
 }
-.dish-card .about-dish p {
+.dish-card__about-dish p {
   font-size: 12px;
 }
 
@@ -481,6 +480,13 @@ h4 {
 }
 .card:hover {
   cursor: pointer;
+  box-shadow: 0px 3px 0.5rem rgba(0, 0, 0, 0.5);
+}
+@media screen and (min-width: 768px) {
+  .card:hover {
+    box-shadow: 0px 3px 0.5rem rgba(0, 0, 0, 0.25);
+    transform: scale(1.01);
+  }
 }
 .card__image {
   height: 10rem;
@@ -503,7 +509,7 @@ h4 {
   border-radius: 3px;
   font-size: 12px;
 }
-.card .card-details {
+.card__details {
   display: flex;
   flex-direction: row;
   color: black;
@@ -518,13 +524,13 @@ h4 {
 .subtiles {
   color: black;
 }
-.subtiles .card-title {
+.subtiles__card-title {
   margin: 0;
   padding-left: 1rem;
   padding-top: 0.5rem;
   font-size: 16px;
 }
-.subtiles .byline {
+.subtiles__byline {
   margin: 0;
   padding-left: 1rem;
   padding-top: 0.2rem;

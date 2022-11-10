@@ -14,6 +14,12 @@
 
     &:hover{
         cursor: pointer;
+        box-shadow: $shadow-plus;
+
+        @include responsive($tablet) {
+            box-shadow: $shadow;
+            transform: scale(1.01);
+        }
         
     }
     &__image{
@@ -37,7 +43,7 @@
         border-radius: 3px;
         font-size: 12px;
     }
-    .card-details{
+    &__details{
         display: flex;
         flex-direction: row;
         color: black;
@@ -53,14 +59,14 @@
 .subtiles{
     color: black;
 
-    .card-title{
+    &__card-title{
         margin: 0;
         padding-left: 1rem;
         padding-top: 0.5rem;
         font-size: $size - 8;    
   }
 
-    .byline{
+    &__byline{
         margin: 0;
         padding-left: 1rem;
         padding-top: 0.2rem;
