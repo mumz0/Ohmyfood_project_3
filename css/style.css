@@ -328,13 +328,11 @@ h4 {
   color: white;
   text-align: center;
   font-size: 16px;
-  box-shadow: 0px 3px 0.5rem rgba(0, 0, 0, 0.25);
 }
 .btn:hover, .headings .about .home-btn:hover, .order-btn:hover {
   cursor: pointer;
   transform: scale(1.01);
   background: linear-gradient(#ff9de4, #a16ddf);
-  box-shadow: 0px 3px 0.5rem rgba(0, 0, 0, 0.5);
 }
 
 .dish-card {
