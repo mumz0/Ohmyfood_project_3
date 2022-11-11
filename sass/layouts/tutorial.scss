@@ -12,7 +12,7 @@
           }
     }  
 
-    .operations {
+    &__operations {
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
@@ -26,7 +26,7 @@
             width: 35%;
           }
 
-        .step {
+        &__step {
             counter-increment: compteListe 1;
             display: flex;
             flex-direction: row;
