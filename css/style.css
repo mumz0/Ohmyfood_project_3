@@ -295,6 +295,9 @@ h4 {
   cursor: pointer;
   background-color: #f4edfb;
 }
+.tutorial__operations__step:hover i {
+  color: #9356DC;
+}
 .tutorial__operations__step span {
   font-weight: 600;
 }
