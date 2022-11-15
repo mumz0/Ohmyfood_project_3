@@ -233,7 +233,7 @@ h4 {
   content: "";
   display: block;
   margin-left: 0%;
-  width: 9%;
+  width: 40px;
   padding-top: 5px;
 }
 
@@ -290,6 +290,10 @@ h4 {
   height: 4.5rem;
   justify-content: start;
   align-items: center;
+}
+.tutorial__operations__step:hover {
+  cursor: pointer;
+  background-color: #f4edfb;
 }
 .tutorial__operations__step span {
   font-weight: 600;
