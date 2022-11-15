@@ -39,6 +39,9 @@
             &:hover{
                 cursor: pointer;
                 background-color:#f4edfb;
+                i{
+                    color: $primary-color;
+                }
             }
             span {
                 font-weight: 600;
